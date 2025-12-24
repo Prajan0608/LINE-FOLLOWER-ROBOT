@@ -4,7 +4,7 @@
 
 **Student Name:** PRAJAN VS  
 **College:** Kumaraguru College of Technology  
-**Degree:** B.E / B.Tech  
+**Degree:** B.E  
 **Project Type:** Mini Project  
 **Project Title:** Line Follower Robot  
 **Platform:** Arduino Mini Pro  
@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 A **Line Follower Robot (LFR)** is an autonomous robotic system designed to follow a predefined path using infrared (IR) sensors.  
 This project implements a **PID (Proportional–Integral–Derivative) control algorithm** to achieve accurate line tracking, smooth motion, and stable performance at higher speeds.
@@ -21,7 +21,7 @@ The robot continuously senses surface reflectivity, calculates positional error,
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Design and implement an autonomous line-following robot  
 - Apply PID control for precise motion correction  
@@ -31,7 +31,7 @@ The robot continuously senses surface reflectivity, calculates positional error,
 
 ---
 
-## ⚙️ Hardware Components
+## Hardware Components
 
 | Component | Specification | Quantity |
 |---------|--------------|----------|
@@ -47,7 +47,7 @@ The robot continuously senses surface reflectivity, calculates positional error,
 
 ---
 
-## 🔌 Circuit Connections
+## Circuit Connections
 
 ### IR Sensor Array
 - Sensor outputs → Arduino **A1 – A5**
@@ -68,9 +68,9 @@ The robot continuously senses surface reflectivity, calculates positional error,
 
 ---
 
-## 🧠 Working Principle
+## Working Principle
 
-### 1️⃣ Sensor Calibration
+### 1️ Sensor Calibration
 - Activated using **Button 1 (Pin 11)**
 - Robot rotates in place
 - Stores:
@@ -78,27 +78,27 @@ The robot continuously senses surface reflectivity, calculates positional error,
   - Maximum values → black line
 - Threshold values calculated automatically
 
-### 2️⃣ Line Detection
+### 2️ Line Detection
 - IR sensor readings mapped to **0–1000**
 - Converted into digital states using threshold
 - Determines whether the robot is on the line
 
-### 3️⃣ Error Calculation
+### 3️ Error Calculation
 - Each sensor has an assigned weight
 - Calculates lateral deviation from the line center
 
-### 4️⃣ PID Control
+### 4️ PID Control
 - **Proportional (P):** Corrects present error  
 - **Integral (I):** Eliminates steady-state error  
 - **Derivative (D):** Reduces oscillations  
 
-### 5️⃣ Differential Drive Control
+### 5️ Differential Drive Control
 - PWM values adjusted for left and right motors
 - Maintains smooth and stable trajectory
 
 ---
 
-## 🧪 PID Parameters
+##  PID Parameters
 
 ```cpp
 float Kp = 0.12;
